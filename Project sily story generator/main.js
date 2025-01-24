@@ -41,3 +41,25 @@ function result() {
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }
+/*ternary operatory(how to use it)
+
+ condition ? run this code : run this code instead
+e.g. const greeting = true;
+    greeting === true
+  ? "Happy birthday Mrs. Smith — we hope you have a great day!"
+  : "Good morning Mrs. Smith.";
+
+another example
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+select.addEventListener("change", () =>
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black"),
+
+
+ */ 
+
