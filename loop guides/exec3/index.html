@@ -41,7 +41,13 @@
 
 
     // Add your code here
-
+    while(i >= 2){
+        if (isPrime(i)) {
+            para.textContent += i + ', '; // Add prime numbers to the paragraph
+          }
+        
+        i--;
+    }
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
