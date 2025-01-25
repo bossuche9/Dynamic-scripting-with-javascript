@@ -42,9 +42,12 @@
 
     // Add your code here
     while(i >= 2){
-        if (isPrime(i)) {
-            para.textContent += i + ', '; // Add prime numbers to the paragraph
-          }
+        if(isPrime(i) === false){
+            i--;
+            continue;
+        } else{
+            para.textContent += i + ",";
+        }
         
         i--;
     }
