@@ -19,7 +19,8 @@
   <body>
 
     <section class="preview">
-
+        <ul class="fruits"> 
+        </ul>
 
 
     </section>
@@ -30,6 +31,11 @@
     const list = document.createElement('ul');
 
     // Add your code here
+    for(let array of myArray){
+        const listitem = document.createElement('li');
+        listitem.textContent = array;
+        list.appendChild(listitem);
+    }
 
     // Don't edit the code below here!
 
