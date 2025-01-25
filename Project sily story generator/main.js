@@ -40,7 +40,7 @@ function result() {
 }
   story.textContent = newStory;
   story.style.visibility = 'visible';
-}
+
 /*ternary operatory(how to use it)
 
  condition ? run this code : run this code instead
