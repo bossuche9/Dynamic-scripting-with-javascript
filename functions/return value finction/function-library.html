@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function squared(num) {
+        return num * num;
+      }
+      
+      function cubed(num) {
+        return num * num * num;
+      }
+      
+      function factorial(num) {
+        if (num < 0) return undefined;
+        if (num === 0) return 1;
+        let x = num - 1;
+        while (x > 1) {
+          num *= x;
+          x--;
+        }
+        return num;
+      }
+
+      function squareroot(num){
+        return Math.sqrt(num);
+      }
+
+      function cuberoot(num){
+        return Math.cbrt(num);
+      }
+
+      function calculateCircumferenece(num){
+        return 2 *Math.PI * num;
+      }
+
+      input.addEventListener("change", () => {
+        const num = parseFloat(input.value);
+        if (isNaN(num)) {
+          para.textContent = "You need to enter a number!";
+        } else {
+            para.innerHTML = `${num} squared is ${squared(num)}.<br> `;
+            para.innerHTML += `${num} cubed is ${cubed(num)}.<br>`;
+            para.innerHTML += `${num} factorial is ${factorial(num)}.<br>`;
+            para.innerHTML += `${num} squareroot is ${squareroot(num)}.<br>`;
+            para.innerHTML += `${num} cuberoot is ${cuberoot(num)}.<br>`;
+            para.innerHTML += `${num} radius circe cirumcference is ${calculateCircumferenece(num)}.<br>`;
+        }
+      });
+      
+      
+
+  </script>
+</body>
+</html>
