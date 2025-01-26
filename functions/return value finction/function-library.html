@@ -51,6 +51,11 @@
         return 2 *Math.PI * num;
       }
 
+      function circleArea(num){
+        const area =  Math.round(Math.PI * num**2 )
+        return area;
+      }
+
       input.addEventListener("change", () => {
         const num = parseFloat(input.value);
         if (isNaN(num)) {
@@ -62,6 +67,7 @@
             para.innerHTML += `${num} squareroot is ${squareroot(num)}.<br>`;
             para.innerHTML += `${num} cuberoot is ${cuberoot(num)}.<br>`;
             para.innerHTML += `Circle of radius ${num} cirumcference is ${calculateCircumferenece(num)}.<br>`;
+            para.innerHTML += `Arrea of a Circle with radius ${num} is ${circleArea(num)}.<br>`;
         }
       });
       
